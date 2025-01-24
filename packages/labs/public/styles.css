@@ -1,0 +1,50 @@
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Segoe UI";
+}
+
+header {
+    font-family: "Playwrite VN", serif;
+    color: var(--heading-color);
+    background-color: var(--background-color-header);
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+}
+header h1, header p {
+    margin: 1em;
+}
+header a:visited {
+    color: var(--link-header-visted);
+}
+
+a:visited {
+    color: var(--link-color);
+}
+
+h2 {
+    font-family: "Playwrite VN", serif;
+    color: var(--heading-color);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#left, #right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 2rem 2rem 2rem;
+}
