@@ -5,11 +5,7 @@ import {toHtmlElement} from "./toHtmlElement.mjs";
 function navBar () {
     console.log("Creating Nav bar");
     console.log(window.location.href);
-    return toHtmlElement(`<header>
-                <h1>Gabe Alonso</h1>
-                <p> <a href=\"index.html\">Home</a> </p>
-                <p> <a href=\"subpage.html\">Projects</a> </p>
-            </header>`);
+    return toHtmlElement(`<cus-nav></cus-nav>`);
 }
 
 window.addEventListener("load", () => { // Create a function on the fly
