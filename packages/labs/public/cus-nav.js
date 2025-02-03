@@ -94,18 +94,21 @@ class CusNav extends HTMLElement {
         let pagesDiv = shadowRoot.getElementById("pages");
         let checkbox = shadowRoot.getElementById("dark-check");
 
-        let pages = pagesDiv.getElementsByTagName("a");
-        let page;
-        for (page of pages){
-            //console.log(page.href);
-            if (window.location.href.includes(page.href)) {
-                //console.log("We changing " + page.href);
-                page.style.color = "blue";
-                page.style.fontSize = "1.5em";
-                page.style.fontWeight = "bold";
+
+        window.addEventListener("load", () => { // Create a function on the fly
+            let pages = pagesDiv.getElementsByTagName("a");
+            let page;
+            for (page of pages){
+                //console.log(page.href);
+                if (window.location.href.includes(page.href)) {
+                    //console.log("We changing " + page.href);
+                    page.style.color = "blue";
+                    page.style.fontSize = "1.5em";
+                    page.style.fontWeight = "bold";
+                }
+                //console.log(page);
             }
-            //console.log(page);
-        }
+        });
         let checkedST = localStorage.getItem("checked");
         if (checkedST !== null) {
             if (checkedST === "true") {
@@ -168,6 +171,7 @@ class CusNav extends HTMLElement {
                 pagesDiv.style.display = "none";
             }
         });
+
     }
 }
 
